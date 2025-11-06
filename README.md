@@ -48,7 +48,7 @@ The Orchestra system consists of four specialized agents:
 - **`code-review-subagent.agent.md`** - Quality assurance specialist.
     - Reviews uncommitted code changes using git to identify new code.
     - Validates test coverage and code quality.
-    - Returns review results back to Conductor (APPROVED/NEEDS_REVISION/FAILED).
+    - Returns review results back to Conductor (`APPROVED/NEEDS_REVISION/FAILED`).
     - Uses Claude Sonnet 4.5 by default.
 
 ## Prerequisites
