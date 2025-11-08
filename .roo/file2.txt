@@ -1,1 +1,0 @@
-Content of file2.txt from commit 740ef389d497522409d5e4b0f4096abfdbe1a6e4
