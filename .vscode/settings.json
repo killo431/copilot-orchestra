@@ -93,12 +93,7 @@
     "alembic",
     "pytest",
     "pylint",
-    "uvicorn",
-    "chroma",
-    "langchain",
-    "tiktoken",
-    "dotenv",
-    "openai"
+    "uvicorn"
   ],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
@@ -192,14 +187,5 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-docker"]
     }
-  },
-  "task.autoDetect": "on",
-  "task.problemMatchers.neverPrompt": false,
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
-    "**/.venv/**": true,
-    "**/indexer/chroma_db/**": true
   }
 }
