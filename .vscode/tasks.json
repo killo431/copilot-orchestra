@@ -1,0 +1,121 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Auto Setup Environment",
+      "type": "shell",
+      "command": "./setup-environment.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": false,
+        "showReuseMessage": false
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Setup Environment (Manual)",
+      "type": "shell",
+      "command": "./setup-environment.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Reset and Re-run Setup",
+      "type": "shell",
+      "command": "rm -f .setup_complete && ./setup-environment.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup RAG Indexer",
+      "type": "shell",
+      "command": "cd indexer && ./setup.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Indexer Docker Image",
+      "type": "shell",
+      "command": "docker compose build",
+      "options": {
+        "cwd": "${workspaceFolder}/indexer"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Indexer",
+      "type": "shell",
+      "command": "docker compose up",
+      "options": {
+        "cwd": "${workspaceFolder}/indexer"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": [],
+      "isBackground": false
+    },
+    {
+      "label": "Stop Indexer",
+      "type": "shell",
+      "command": "docker compose down",
+      "options": {
+        "cwd": "${workspaceFolder}/indexer"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "View Project Documentation",
+      "type": "shell",
+      "command": "code README.md QUICKSTART.md ARCHITECTURE.md",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

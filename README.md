@@ -94,7 +94,42 @@ Before using the GitHub Copilot Orchestra, ensure you have:
 
 ## Installation
 
-### Initial Setup
+### Automatic Setup (Recommended)
+
+The easiest way to get started is to use the automatic setup:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ShepAlderson/copilot-orchestra.git
+   cd copilot-orchestra
+   ```
+
+2. **Open in VSCode Insiders**
+   ```bash
+   code-insiders .
+   ```
+
+3. **Automatic Environment Setup**
+   - When you open the workspace, a setup task will automatically run
+   - The script will verify prerequisites and configure the environment
+   - A welcome message will guide you through next steps
+   - See [WELCOME.md](WELCOME.md) after opening the workspace
+
+   **Or run manually:**
+   ```bash
+   ./setup-environment.sh
+   ```
+
+The setup script will:
+- ✅ Check prerequisites (Git, Node.js, Python, Docker)
+- ✅ Create necessary directories
+- ✅ Configure Git settings  
+- ✅ Set up the indexer environment
+- ✅ Display next steps
+
+### Manual Setup
+
+If you prefer manual setup or the automatic setup doesn't work:
 
 1. **Clone or Download the Repository**
    ```bash
