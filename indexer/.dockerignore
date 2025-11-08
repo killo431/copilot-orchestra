@@ -1,0 +1,36 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environment
+.env
+.env.local
+
+# Vector Store (don't include in image)
+chroma_db/
+
+# Data
+data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+
+# Documentation (will be mounted)
+*.md
+!README.md
+
+# Tests (not needed in production image)
+tests/
+*.test.py

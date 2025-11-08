@@ -91,6 +91,20 @@
     "alembic",
     "pytest",
     "pylint",
-    "uvicorn"
-  ]
+    "uvicorn",
+    "chroma",
+    "langchain",
+    "tiktoken",
+    "dotenv",
+    "openai"
+  ],
+  "task.autoDetect": "on",
+  "task.problemMatchers.neverPrompt": false,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.venv/**": true,
+    "**/indexer/chroma_db/**": true
+  }
 }

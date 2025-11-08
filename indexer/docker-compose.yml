@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  indexer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: copilot-orchestra-indexer
+    volumes:
+      # Mount the docs directory from parent
+      - ../docs:/app/docs:ro
+      # Mount additional markdown files from parent
+      - ../README.md:/app/docs/README.md:ro
+      - ../ARCHITECTURE.md:/app/docs/ARCHITECTURE.md:ro
+      - ../CONTRIBUTING.md:/app/docs/CONTRIBUTING.md:ro
+      - ../FAQ.md:/app/docs/FAQ.md:ro
+      - ../QUICKSTART.md:/app/docs/QUICKSTART.md:ro
+      # Persist the vector store
+      - ./chroma_db:/app/chroma_db
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DOCS_DIR=/app/docs
+      - CHROMA_PERSIST_DIR=/app/chroma_db
+      - COLLECTION_NAME=${COLLECTION_NAME:-copilot_orchestra_docs}
+      - CHUNK_SIZE=${CHUNK_SIZE:-1000}
+      - CHUNK_OVERLAP=${CHUNK_OVERLAP:-200}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-text-embedding-3-small}
+    restart: "no"

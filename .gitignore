@@ -62,6 +62,9 @@ coverage/
 logs/
 *.log
 
+# Setup completion flag
+.setup_complete
+
 # Metrics (if using optional metrics tracking)
 metrics/*.json
 !metrics/.gitkeep
